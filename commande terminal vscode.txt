@@ -1,0 +1,10 @@
+    py -m pip install flask sqlalchemy pyodbc
+
+
+   py -c "import pyodbc; print(pyodbc.drivers())"
+
+
+   $env:DATABASE_URL = "mssql+pyodbc:///?odbc_connect=DRIVER%3D%7BODBC+Driver+18+for+SQL+Server%7D%3BSERVER%3Dlocalhost%5CSQLEXPRESS%3BDATABASE%3Dfootoria%3BTrusted_Connection%3Dyes%3BTrustServerCertificate%3Dyes"
+
+
+   py app.py

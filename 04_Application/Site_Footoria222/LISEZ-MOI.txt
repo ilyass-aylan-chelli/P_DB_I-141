@@ -1,0 +1,21 @@
+DOSSIER DU SITE FOOTORIA (a remettre au visiteur a l'etape B)
+
+Site_Footoria/
+|-- app.py                  Programme Flask (2 missions)
+|-- templates/index.html    Page du site
+|-- static/
+      |-- style.css         Theme noir et rouge (comme l'affiche)
+      |-- app.js            Missions, terminal SQL, chronometre
+      |-- poster.jpg        Visuel de l'affiche (fond de la page d'accueil)
+
+Modifications faites dans app.py par rapport a ta version :
+ - 2 missions seulement : "La premiere trace" (WHERE / LIKE) et "La connexion" (JOIN)
+ - connexion SQL Server locale par defaut (authentification Windows)
+ - site lance en 127.0.0.1 avec debug=False (avant : 0.0.0.0 et debug=True)
+Modification dans templates/index.html : "Six missions" devient "Deux missions".
+
+Modules a installer : py -m pip install flask sqlalchemy pyodbc
+Lancement : py app.py  puis http://127.0.0.1:5000  (controle : /health)
+
+Remarque : les polices (Creepster, Inter, JetBrains Mono) viennent de Google Fonts.
+Sans Internet, le site fonctionne avec des polices de remplacement.

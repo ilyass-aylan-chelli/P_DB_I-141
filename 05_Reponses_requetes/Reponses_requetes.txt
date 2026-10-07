@@ -1,0 +1,47 @@
+FOOTORIA - REPONSES AUX MISSIONS (document animateur)
+=====================================================
+Resultats attendus apres execution des 3 scripts SQL. Ils sont deduits du contenu des scripts :
+verifie-les une fois sur ton poste avant les Portes Ouvertes.
+
+Le site valide une requete si : elle s'execute, elle contient les mots-cles attendus
+et elle renvoie au moins une ligne. Il affiche au maximum 100 lignes.
+
+
+-----------------------------------------------------
+MISSION 1 - LA PREMIERE TRACE (mots-cles : select, from, where, like)
+-----------------------------------------------------
+SELECT TOP 10 * FROM Joueurs WHERE nom LIKE '%a%';
+
+Resultat : 10 lignes (colonnes id_joueur, nom, prenom, age, poste, id_equipe)
++ message "TRACE CONFIRMEE".
+Sans TOP : le site affiche 100 lignes (limite d'affichage).
+Si WHERE ou LIKE manque : le site indique le mot-cle manquant.
+
+
+-----------------------------------------------------
+MISSION 2 - LA CONNEXION (mots-cles : select, from, join)
+-----------------------------------------------------
+SELECT TOP 10 j.nom, j.prenom, e.nom_des_equipes
+FROM Joueurs AS j
+JOIN Equipe AS e ON e.id_equipe = j.id_equipe;
+
+Resultat : 10 lignes + message "TRACE CONFIRMEE". Exemples de lignes attendues
+(l'ordre n'est pas garanti sans ORDER BY) :
+
+Martin | Lucas   | Real Madrid
+Martin | Hugo    | FC Barcelona
+Martin | Gabriel | Atletico Madrid
+
+Remarque : dans les donnees generees, tous les joueurs d'un meme club ont le meme prenom
+(effet du script, pas une regle du football).
+
+
+-----------------------------------------------------
+CONTROLE FINAL DES SCRIPTS (affiche par le script 3 dans SSMS)
+-----------------------------------------------------
+Equipe       100
+competition  100
+Joueurs      10000000
+qualifier    1000
+match_       100000
+(la table marquer reste vide : elle n'est pas utilisee par les 2 missions)

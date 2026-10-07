@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FOOTORIA — SQL Investigation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body><div class="noise"></div>
+<header class="topbar"><a class="logo" href="/"><span>⚽</span> FOOTORIA</a><nav><a href="#missions">MISSIONS</a><a href="#terminal">SQL TERMINAL</a><button class="hamb"><i></i><i></i><i></i></button></nav></header>
+
+<main>
+<section class="hero"><div class="hero-map"></div><div class="hero-content">
+<div class="glitch-label">DOSSIER #666 • ACCÈS AUX ARCHIVES SQL</div>
+<h1>FOOTORIA:<br><span>LE CLUB DISPARU</span></h1>
+<p class="hero-sub">Les archives existent encore. Le club, lui, a disparu.<br>Écris tes propres requêtes SQL pour retrouver les traces.</p>
+<a class="blood-btn" href="#missions">COMMENCER L'ENQUÊTE <b>→</b></a>
+</div><div class="cross">×</div></section>
+
+<section class="brief">
+<div><span class="red-label">OBJECTIF</span><h2>UNE ENQUÊTE. DU SQL.</h2><p>Chaque mission te donne un indice. À toi d'écrire la requête SQL qui permet de débloquer la piste suivante.</p></div>
+<div class="flow"><div>INDICE</div><b>→</b><div>REQUÊTE SQL</div><b>→</b><div>RÉSULTAT</div><b>→</b><div>NOUVEL INDICE</div></div>
+</section>
+
+<section id="missions" class="missions"><div class="section-title"><span>01 / DOSSIERS</span><h2>LES MISSIONS</h2><p>Progresse dans l'enquête en écrivant toi-même les requêtes.</p></div>
+<div id="missionList" class="mission-list"></div></section>
+
+<section id="terminal" class="terminal-section">
+<div class="terminal-head"><div><span class="red-label">02 / ARCHIVES</span><h2>SQL TERMINAL</h2></div><div class="status"><i></i> DATABASE ONLINE</div></div>
+<div class="terminal-layout">
+<aside class="mission-side"><div class="side-label">MISSION ACTIVE</div><div id="activeTitle">—</div><div id="activeDifficulty">—</div><div class="separator"></div><p id="activeStory">Sélectionne une mission.</p><div class="hint"><b>INDICE</b><span id="activeHint">—</span></div></aside>
+<div class="terminal">
+<div class="terminal-bar"><span>footoria@archive:~$</span><span id="timer">00:00</span></div>
+<textarea id="sql" spellcheck="false" placeholder="-- écris ta requête SQL ici&#10;SELECT ..."></textarea>
+<div class="terminal-actions"><button id="run">▶ EXÉCUTER LA REQUÊTE</button><button id="clear" class="ghost">EFFACER</button></div>
+<div id="feedback" class="feedback hidden"></div>
+<div class="output"><div class="output-head"><span>RÉSULTAT</span><span id="count">0 ligne</span></div><div id="tableWrap"><div class="empty">Aucune requête exécutée.</div></div></div>
+</div></div>
+</section>
+
+<section class="final-message"><div class="seal">666</div><h2>RETROUVE LE CLUB DISPARU</h2><p>Deux missions. Des millions de lignes. Une seule enquête.</p><a href="#terminal" class="blood-btn">OUVRIR LES ARCHIVES</a></section>
+</main><footer>FOOTORIA · PROJET SQL · 10 MILLIONS D'ENREGISTREMENTS</footer>
+<script src="/static/app.js"></script></body></html>
