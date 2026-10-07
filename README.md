@@ -28,10 +28,10 @@ Footoria_P_BD_141/
 |
 |-- 05_Reponses_requetes/
 |      |-- Reponses_requetes.txt                 Solutions des 2 missions (animateur)
-|      |-- bandrolle
-|      |-- journal de travaille
-|      |-- commande terminal vscode.txt
-|      |-- README
+|     |-- bandrolle
+|     |-- journal de travaille
+|     |-- commande terminal vscode.txt
+|     |-- README
 
 Ordre d'utilisation : lire 01_Manuels, installer le poste, puis suivre 02_Documents_visiteurs.
 Les scripts 1, 2 et 3 sont a executer dans cet ordre dans SSMS.
